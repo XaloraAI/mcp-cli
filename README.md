@@ -1,4 +1,4 @@
-# Heurist MCP Installer
+# XaloraMCP Installer
 
 CLI tool to install [Heurist](https://mcp.heurist.ai/) MCP tools into compatible clients.
 
@@ -20,7 +20,7 @@ pnpm dlx heurist-mcp-cli
 npx -y heurist-mcp-cli <tool-url-or-id> <api-key> [client]
 ```
 
-- `<tool-url-or-id>`: The full URL of the Heurist MCP tool, or just the short tool ID (e.g., `0f1234de`).
+- `<tool-url-or-id>`: The full URL of the XaloraMCP tool, or just the short tool ID (e.g., `0f1234de`).
 - `<api-key>`: Your API key for verification.
 - `[client]` (optional): Specify a client (`claude`, `windsurf`, `cursor`, `vscode`, `vscode-insiders`). If omitted, you will be prompted to select one from the detected clients.
 
