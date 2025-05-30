@@ -1,0 +1,57 @@
+{
+  "name": "heurist-mcp-cli",
+  "version": "0.1.5",
+  "description": "CLI tool to install Heurist SSE MCP tools",
+  "main": "dist/index.cjs",
+  "module": "dist/index.cjs",
+  "type": "commonjs",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "heurist-mcp-cli": "dist/index.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heurist-network/mcp-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/heurist-network/mcp-cli/issues"
+  },
+  "author": "Heurist <team@heurist.xyz>",
+  "license": "MIT",
+  "homepage": "https://mcp.heurist.ai",
+  "scripts": {
+    "start": "node dist/index.cjs",
+    "build": "node build.mjs",
+    "clean": "rm -rf dist",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write --unsafe",
+    "format": "biome format --write",
+    "typecheck": "tsc --noEmit",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run typecheck && npm run lint && npm run format && npm run build",
+    "release": "dotenv release-it -- -i patch"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@codingame/esbuild-import-meta-url-plugin": "^1.0.3",
+    "@release-it/conventional-changelog": "^10.0.1",
+    "@types/node": "^22.15.0",
+    "dotenv-cli": "^8.0.0",
+    "esbuild": "^0.25.3",
+    "release-it": "^19.0.1",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "boxen": "^8.0.1",
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "enquirer": "^2.4.1",
+    "open": "^10.1.1",
+    "ora": "^8.2.0"
+  }
+}
