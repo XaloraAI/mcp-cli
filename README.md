@@ -1,7 +1,5 @@
 # XaloraMCP Installer
 
-CLI tool to install [Heurist](https://mcp.heurist.ai/) MCP tools into compatible clients.
-
 ## Installation
 
 ```bash
